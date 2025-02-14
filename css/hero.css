@@ -1,0 +1,62 @@
+
+.heroParent {
+	background-color: white;
+}
+
+/* Hero2 セクション */
+.hero2 {
+	display: flex;
+	/* 最大横幅を指定 */
+	margin: 0 auto;
+	/* セクションを中央揃え */
+	background-color: white;
+	background-color: #f8f9fa;
+}
+
+.hero2__image-container {
+	position: relative;
+	width: 100%;
+	/* 親要素の幅に合わせる */
+	overflow: hidden;
+	/* 子要素がはみ出さないようにする */
+}
+
+.hero2__image-container img {
+	width: 100%;
+	/* 横幅を親要素に合わせる */
+	height: auto;
+}
+
+.hero2__pc {
+	display: block;
+}
+
+.hero2__phone {
+	display: none;
+}
+
+.hero2__moshikomi-button:hover {
+	background-color: rgb(30, 30, 30);
+}
+
+@media (max-width: 768px) {
+	.hero1 {
+		padding: 0;
+		/* 余白を追加 */
+	}
+
+	.hero1 h1 {
+		font-size: 1.5rem;
+		/* 指定された文字サイズ */
+		line-height: 1.4;
+		/* 行間を調整 */
+	}
+
+	.hero2__pc {
+		display: none;
+	}
+
+	.hero2__phone {
+		display: block;
+	}
+}

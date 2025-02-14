@@ -1,0 +1,173 @@
+.slider {
+	max-width: 1200px;
+	padding: 50px 50px 35px 50px;
+	margin: auto;
+	position: relative;
+	/* スライダー要素の親 */
+}
+
+/* 赤い横線（太線）を表示する */
+.underline-line {
+	width: 150px;
+	/* 横線の長さ */
+	height: 10px;
+	/* 横線の太さ */
+	background-color: red;
+	/* 赤色 */
+	margin: 20px auto;
+	/* 中央揃え */
+}
+
+/* h2タグの中央揃え */
+.swiper-title {
+	text-align: center;
+	font-size: 2rem;
+	/* 文字の大きさ */
+	font-weight: bold;
+}
+
+/* h2の一部（"買取参考価格"）だけ赤文字に */
+.highlight {
+	color: red;
+	font-weight: bold;
+}
+
+/* 説明文の中央揃え */
+.description {
+	text-align: center;
+	font-size: 1rem;
+	color: #333;
+	/* 落ち着いた色 */
+	margin-top: 10px;
+}
+
+
+.swiper-container {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	/* ここを追加！ */
+}
+
+.swiper-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.swiper-slide {
+	padding: 0px;
+	text-align: center;
+	padding-top: 20px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide-image {
+	max-width: 80%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.price {
+	font-weight: bold;
+	color: red;
+	font-size: 1rem;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	margin: 0;
+}
+
+.price_tag {
+	font-size: 1.5rem;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-button-prev {
+	left: -50px;
+}
+
+.swiper-button-next {
+	right: -50px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	font-size: 20px;
+	color: red;
+}
+
+.swiper-pagination {
+	position: absolute;
+	bottom: -40px;
+	/* ここを変更して適切な位置に */
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.gold_price-button {
+  display: flex;
+  justify-content: center; /* 横方向に中央揃え */
+  align-items: center; /* 縦方向に中央揃え（必要なら） */
+  margin-top: 20px;
+}
+
+/* おしゃれな問い合わせボタン */
+.contact-button {
+  margin: 10px auto;
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff4e50, #fc913a); /* グラデーション */
+  border-radius: 30px; /* 丸みのあるボタン */
+  text-decoration: none; /* 下線を消す */
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ホバー時のエフェクト */
+.contact-button:hover {
+  background: linear-gradient(45deg, #fc913a, #ff4e50); /* グラデーションの向きを変更 */
+  transform: scale(1.05); /* ちょっと大きくする */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .watch-item-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* ← ここを追加 */
+    }
+
+    .step-container {
+        flex-direction: column;
+        gap: 20px; /* ← ステップ間に余白を作る */
+    }
+
+    .slider {
+        padding: 0;
+        width: 95%;
+        margin: auto;
+        gap: 20px; /* ← スライダー要素の間隔 */
+    }
+}
+

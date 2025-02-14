@@ -1,0 +1,52 @@
+/* フッター全体のスタイル */
+.footer {
+    background-color: #333; /* ダークグレーの背景 */
+    color: #fff; /* 白文字 */
+    padding: 20px 10px; /* 上下と左右の余白 */
+    text-align: center; /* コンテンツを中央揃え */
+    font-size: 0.9rem; /* フォントサイズを調整 */
+}
+
+/* コンテンツの内包 */
+.footer__content {
+    max-width: 1200px; /* 最大幅 */
+    margin: 0 auto; /* 中央揃え */
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: center; /* 中央揃え */
+    gap: 15px; /* 各要素間の余白 */
+}
+
+/* ナビゲーションリンク */
+.footer__nav {
+    display: flex;
+    gap: 15px; /* 各リンク間の余白 */
+}
+
+.footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* 色変化のアニメーション */
+}
+
+.footer__nav a:hover {
+    color: #c23b3b; /* ホバー時の色 */
+}
+
+/* ソーシャルアイコン */
+.footer__socials {
+    display: flex;
+    gap: 10px; /* 各アイコン間の余白 */
+}
+
+.footer__socials a img {
+    width: 24px; /* アイコンのサイズ */
+    height: 24px;
+    filter: invert(100%); /* アイコンを白に変換 */
+    transition: filter 0.3s ease; /* ホバー時のエフェクト */
+}
+
+.footer__socials a img:hover {
+    filter: invert(70%); /* ホバー時の明るさ変更 */
+}

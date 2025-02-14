@@ -1,0 +1,162 @@
+/* ヘッダー全体 */
+.header {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 10px 20px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+}
+
+
+/* コンテナ */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* ロゴとサイト名 */
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	height: 60px;
+	margin-right: 20px;
+}
+
+.site-name {
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #000;
+}
+
+/* ハンバーガーボタン */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.hamburger span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	border-radius: 2px;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.ads {
+	display: flex;
+	justify-content: center;
+	/* 中央揃え */
+	align-items: center;
+	/* 縦方向も中央揃え */
+	max-width: 100%;
+	background-color: #fff;
+	margin: 1.5rem auto;
+}
+
+.ads .ads__hiromi {
+	display: flex;
+	justify-content: center;
+	/* 横方向の中央揃え */
+	align-items: center;
+	/* 縦方向の中央揃え */
+	width: 100%;
+	height: 100%;
+}
+
+.ads__hiromi-hiromi {
+	max-width: 100%;
+	/* 親要素の幅に合わせる */
+	height: auto;
+	/* アスペクト比を保つ */
+}
+
+.nav {
+	display: flex;
+}
+
+/* ナビゲーション */
+.nav ul {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	font-size: 1rem;
+	color: #000;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+	color: #007bff;
+}
+
+
+@media (max-width: 768px) {
+	.header {
+		padding: 20px 20px;
+	}
+
+	.logo img {
+		height: 50px;
+		margin-right: 10px;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: #fff;
+		width: 100%;
+		flex-direction: column;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 10;
+	}
+
+	.site-name {
+		font-size: 1.5rem;
+	}
+
+	.nav.active {
+		display: flex;
+	}
+
+	.nav ul {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 20px;
+	}
+
+	.nav ul li {
+		margin-bottom: 10px;
+	}
+
+	.nav ul li a {
+		font-size: 0.7rem;
+	}
+}

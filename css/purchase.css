@@ -1,0 +1,132 @@
+/* セクション全体のスタイル */
+
+.purchases {
+	max-width: 1200px;
+	/* セクションの最大幅 */
+	margin: 0 auto;
+	/* 画面中央揃え */
+	padding: 20px;
+	/* セクション全体の余白 */
+	text-align: center;
+	/* 見出しなどを中央揃え */
+}
+
+.purchase__title {
+	font-size: 2rem;
+	/* タイトルのサイズ */
+	margin-top: 60px;
+	margin-bottom: 60px;
+	/* タイトル下の余白 */
+	color: #333;
+	/* テキストカラー */
+}
+
+/* アイテムコンテナ */
+.purchase__items {
+	display: flex;
+	flex-wrap: wrap;
+	/* 横並びで5列、折り返し対応 */
+	gap: 20px;
+	/* 各アイテムの間隔 */
+	justify-content: center;
+	/* アイテム全体を中央揃え */
+}
+
+/* 各アイテム */
+.purchase__item {
+	flex: 1 1 calc(20% - 20px);
+	/* 5列に均等配置（gapを考慮） */
+	max-width: calc(20% - 20px);
+	/* 最大幅の設定 */
+	text-align: center;
+	/* テキストを中央揃え */
+	margin-bottom: 70px;
+}
+
+.purchase__item img {
+	width: 100%;
+	/* アイテム内で画像がコンテナ幅に収まる */
+	height: auto;
+	/* アスペクト比を維持 */
+	display: block;
+	/* 余分な余白を防ぐ */
+	margin-bottom: 30px;
+	/* 画像とテキストの間隔 */
+}
+
+.purchase__item p {
+	font-size: 1rem;
+	/* 商品名のサイズ */
+	color: #555;
+	/* 商品名のカラー */
+	margin: 0;
+	/* デフォルトマージンをリセット */
+	font-weight: bold;
+	color: black;
+}
+
+.purchase__button-bottom {
+	display: inline-block;
+	background-color: #a06e00;
+	/* 赤色 */
+	color: #fff;
+	/* 白文字 */
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 20px 50px;
+	border: none;
+	border-radius: 5px;
+	/* 角を丸める */
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	/* 軽いシャドウ */
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+
+/* ボタンのホバー時のスタイル */
+.purchase__button-bottom:hover {
+	background-color: #8f6300;
+	/* 少し濃い赤色 */
+	transform: translateY(-2px);
+	/* ボタンを少し浮かせる */
+}
+
+@media (max-width: 768px) {
+	.purchase .purchases__bottom-text {
+		font-size: 0.8rem;
+		font-weight: normal;
+	}
+	
+	.purchase__button-bottom{
+		margin-bottom: 10px;
+	}
+
+	.purchase__item {
+		flex: 1 1 calc(33% - 5px);
+		/* 5列に均等配置（gapを考慮） */
+		max-width: calc(33% - 5px);
+		/* 最大幅の設定 */
+		text-align: center;
+		/* テキストを中央揃え */
+		margin-bottom: 15px;
+	}
+
+	.purchase__items {
+		gap: 5px;
+		/* 各アイテムの間隔 */
+	}
+
+	.purchase__item p {
+		font-size: 0.7rem;
+		/* 商品名のサイズ */
+	}
+
+	.purchase__item img {
+		margin-bottom: 7px;
+		/* 画像とテキストの間隔 */
+	}
+
+}
